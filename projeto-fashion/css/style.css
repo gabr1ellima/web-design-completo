@@ -1,0 +1,134 @@
+body {
+    font-family: tahoma, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1024px;
+    margin: auto;
+}
+
+/* HEADER */
+.header-top {
+    height: 50px;
+    background: #081A24;
+    position: relative;
+}
+
+.logotipo {
+    margin: 10px 0 0 135px;
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+}
+
+.navbar ul {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 15px;
+}
+
+.navbar a {
+    float: left;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #425564;
+    font-size: 12px;
+    transition: color 0.4s;
+}
+
+.navbar a:hover {
+    color: white;
+}
+
+/* PORTFOLIO */
+.portfolio {
+    padding: 50px 100px;
+    text-align: center;
+}
+
+.portfolio h1 {
+    font-size: 36px;
+    color: #252525;
+}
+
+.portfolio p {
+    font-size: 16px;
+    line-height: 2;
+    color:#555;
+}
+
+.gallery {
+    padding: 0 100px 50px 100px;
+    overflow: auto;
+}
+
+.gallery-card{
+    width: 32%;
+    float: left;
+    text-align: center;
+}
+
+.gallery-title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+}
+
+/* ABOUT */
+.about {
+    background-color: #003d52;
+    padding: 100px;
+    color: white;
+    background-image: url(../images/bg_detalhe.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+.about h2 {
+    font-size: 48px;
+}
+
+.about p {
+    line-height: 1.5;
+    width: 60%;
+}
+
+/* CONTACT */
+
+.contact {
+    margin: 50px 0;
+}
+
+.contact address {
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    color: #003d52;
+}
+
+.map iframe{
+    width: 100%;
+}
+
+footer {
+    height: 60px;
+    text-align: center;
+    background-color: #0b171f;
+    line-height: 60px;
+    color: #6f8597;
+}
