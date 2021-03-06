@@ -1,0 +1,47 @@
+:root {
+  --color-blue: #009AE0;
+  --blue-dark: #167BFF;
+  --bg-main: #282a36;
+  --color-black: #030517;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-main);
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  padding: 32px;
+  border-bottom: 1px solid #333;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+header .links {
+  text-align: center;
+}
+
+.links a {
+  color: var(--color-blue);
+  margin: 0 16px;
+  transition: color 0.2s;
+  font-size: 24px;
+}
+
+header div a:hover {
+  color: var(--blue-dark);
+}
+
+#wrapper {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 32px;
+  color: var(--color-blue);
+  text-align: center;
+}
