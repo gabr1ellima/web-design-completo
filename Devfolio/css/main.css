@@ -1,18 +1,39 @@
+:root {
+  --color-pink: #F231A5;
+  --text-dark: #4D4C4C;
+  --text-light: #bcbcbc;
+  --bg-dark: #1C1C1C;
+  --color-black: #000;
+  font-size: 62.5%;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family:'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
+body,
+input,
+button,
+textarea {
+  font-size: 1.6rem;
+}
+
+
 @media screen and (min-width: 320px) {
+
   .df-page-wrapper {
     width: 100%;
     height: 100vh;
     display: block;
-    background-color: #1C1C1C;
-    border: 30px solid #000;
+    background-color: var(--bg-dark);
+    border: 30px solid var(--color-black);
   }
+
   .df-topbar {
     width: 100%;
     height: 110px;
@@ -27,11 +48,109 @@
     height: 110px;
     width: 75px;
     float: left;
-    margin-left: 60px;
+    margin-left: 6rem;
   }
 
   .df-menu {
     display: none;
+  }
+
+  .df-btn-contact {
+    width: 45px;
+    height: 45px;
+    display: block;
+    background-color: var(--color-pink);
+    background-image: url('../images/icon-contact-close.svg');
+    background-repeat: no-repeat;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+    z-index: 200;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+  }
+
+  .df-menu {
+    display: table;
+    float: left;
+    height: 110px;
+    margin-left: 4rem;
+  }
+
+  .df-menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: .2em;
+    color: var(--text-light);
+    display: inline-block;
+    margin: 50px 20px 0;
+    transition: color .4s;
+    position: relative;
+  }
+
+  .df-menu a:first-child {
+    margin-left: 0;
+  }
+
+  .df-menu a:hover {
+    color: var(--color-pink);
+  }
+
+  .df-menu a:before {
+    content: '';
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-pink);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    transition: all 0.2s ease-out;
+    transform: scale(0, 1);
+    transform-origin: center left;
+  }
+
+  .df-menu a:hover:before {
+    transform: scale(1, 1);
+  }
+
+  .df-contact-info {
+    width: 245px;
+    height: 165px;
+    padding: 20px;
+    background-color: var(--color-black);
+    position: fixed;
+    bottom: 120px;
+    right: 60px;
+    z-index: 200;
+    border-radius: 10px 10px 0;
+    color: var(--text-light);
+    line-height: 2.4rem;
+    display: none;
+  }
+
+  .df-social-links {
+    width: 100%;
+    display: flex;
+    height: 50px;
+    align-items: flex-end;
+    justify-content: initial;
+    position: relative;
+  }
+
+  .df-social-links a {
+    padding-right: 24px;
+  }
+
+  .df-corner {
+    width: 25px;
+    height: 25px;
+    display: block;
+    position: absolute;
+    bottom: -25px;
+    right: 0px;
+    background: transparent url(../images/corner.svg) no-repeat;
   }
 }
 
@@ -44,49 +163,7 @@
 }
 
 @media screen and (min-width: 992px) {
-  .df-menu {
-    display: table;
-    float: left;
-    height: 110px;
-    margin-left: 40px;
-  }
 
-  .df-menu a {
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: .2em;
-    color: #bcbcbc;
-    display: inline-block;
-    margin: 50px 20px 0;
-    transition: color .4s;
-    position: relative;
-  }
-
-  .df-menu a:first-child {
-    margin-left: 0;
-  }
-
-  .df-menu a:hover {
-    color: #F231A5;
-  }
-
-  .df-menu a:before {
-    content: '';
-    width: 100%;
-    height: 4px;
-    background-color: #F231A5;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    transition: all 0.2s ease-out;
-    transform: scale(0, 1);
-    transform-origin: center left;
-  }
-
-  .df-menu a:hover:before {
-    transform: scale(1, 1);
-  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -99,4 +176,21 @@
 
 @media screen and (min-width: 1600px) {
   
+}
+
+/* UTILITY CLASSES */
+
+.df-title {
+  font-family: 'Abril Fatface', serif;
+  font-weight: normal;
+  color: var(--color-pink);
+}
+
+/* STATE CLASSES */
+.df-is-open {
+  display: block;
+}
+
+.df-change-icon {
+  background-position-y: -45px;
 }
