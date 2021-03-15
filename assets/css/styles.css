@@ -34,7 +34,7 @@ header .links {
   color: var(--color-blue);
   margin: 0 16px;
   transition: color 0.2s;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 header div a:hover {
@@ -59,12 +59,13 @@ header div a:hover {
 }
 
 .card {
-  border-radius: 0 0 5px 5px;
+  border-radius: 5px;
   background-color: var(--color-card);
   color: var(--color-blue);
 }
 
 .card_image-container img {
+  border-radius: 5px;
   width: 100%;
 }
 
